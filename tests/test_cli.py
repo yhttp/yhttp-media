@@ -1,5 +1,4 @@
-from bddcli import Given, Application as CLIApplication, status, stderr, \
-    stdout, when
+from bddcli import Given, Application as CLIApplication, status, stderr
 from yhttp.core import Application
 
 from yhttp.ext.media import install

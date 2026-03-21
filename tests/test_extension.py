@@ -2,9 +2,7 @@ import os
 import io
 import uuid
 
-import pytest
-from bddrest import status, response, given, when
-from yhttp.core import text, json
+from bddrest import status
 
 from yhttp.ext.media import install
 
