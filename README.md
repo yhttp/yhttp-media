@@ -5,6 +5,6 @@
 [![Coverage Status](https://coveralls.io/repos/github/yhttp/yhttp-media/badge.svg?branch=master)](https://coveralls.io/github/yhttp/yhttp-media?branch=master)
 
 
-Authentication extension for [yhttp](https://github.com/yhttp/yhttp).
+Media/file management extension for [yhttp](https://github.com/yhttp/yhttp).
 
 
