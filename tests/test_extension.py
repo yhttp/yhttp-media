@@ -39,33 +39,3 @@ def test_extension(httpreq, app, tempdir, mocker):
         assert status == 200
 
         assert not os.path.exists(expected)
-#
-#         when(headers=given - 'Authorization')
-#         assert status == 401
-#
-#         when(headers={'Authorization': 'mAlfoRMeD'})
-#         assert status == 401
-#
-#         when(headers={'Authorization': 'Bearer mAlfoRMeD'})
-#         assert status == 401
-#
-#     with httpreq('/admin', headers={'Authorization': f'Bearer {token}'}):
-#         assert status == 200
-#         assert response.json == ['admin']
-#
-#         when(headers={'Authorization': token})
-#         assert status == 401
-#
-#         when()
-#         assert status == 401
-#
-#         when()
-#         assert status == 200
-#
-#         when(headers={'Authorization': f'Bearer {token}'})
-#         assert status == 403
-#
-#         when(headers={'Authorization': f'Bearer {token}'})
-#         assert status == 403
-#
-#     yapp.shutdown()
