@@ -7,9 +7,9 @@ from bddrest import status
 from yhttp.ext.media import install
 
 
-def test_extension(httpreq, app, tempdir, mocker):
+def test_extension(httpreq, app, tmpdir, mocker):
     install(app)
-    mediadirectory = os.path.join(tempdir, 'media')
+    mediadirectory = os.path.join(tmpdir, 'media')
     app.settings.media.physical = mediadirectory
     app.ready()
 

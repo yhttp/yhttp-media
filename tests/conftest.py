@@ -4,8 +4,6 @@ import bddrest
 import pytest
 from yhttp.core import Application
 
-from yhttp.dev.fixtures import tempdir
-
 
 @pytest.fixture
 def app():
