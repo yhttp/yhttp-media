@@ -3,8 +3,7 @@ from .media import Media
 
 
 DEFAULT_SETTINGS = '''
-physical: media
-virtual: media
+directory: media
 '''
 
 

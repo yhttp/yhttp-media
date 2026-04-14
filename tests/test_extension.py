@@ -10,11 +10,11 @@ from yhttp.ext.media import install
 def test_extension(httpreq, app, tmpdir, mocker):
     install(app)
     mediadirectory = os.path.join(tmpdir, 'media')
-    app.settings.media.physical = mediadirectory
+    app.settings.media.directory = mediadirectory
     app.ready()
 
     assert app.media
-    assert app.media.settings.physical == mediadirectory
+    assert app.media.settings.directory == mediadirectory
 
     @app.route()
     def post(req):
