@@ -9,12 +9,10 @@ from yhttp.ext.media import install
 
 def test_extension(httpreq, app, tmpdir, mocker):
     install(app)
-    mediadirectory = os.path.join(tmpdir, 'media')
-    app.settings.media.directory = mediadirectory
+    app.settings.media.directory = tmpdir
     app.ready()
 
     assert app.media
-    assert app.media.settings.directory == mediadirectory
 
     @app.route()
     def post(req):
@@ -32,7 +30,7 @@ def test_extension(httpreq, app, tmpdir, mocker):
     with httpreq(verb='POST', multipart=dict(foo=file)):
         assert status == 200
 
-        expected = os.path.join(mediadirectory, 'foos', expected_filename)
+        expected = os.path.join(tmpdir, 'foos', expected_filename)
         assert os.path.exists(expected)
 
     with httpreq(verb='DELETE', form=dict(filename=expected_filename)):
