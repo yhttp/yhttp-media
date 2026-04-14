@@ -15,5 +15,5 @@ def install(app):
     app.media = Media()
 
     @app.when
-    def ready(app):
+    def configure(app):
         app.media.configure(app.settings.media)
