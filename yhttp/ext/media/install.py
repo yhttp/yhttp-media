@@ -1,3 +1,5 @@
+from pymlconf import Meld
+
 from .cli import MediaCLI
 from .media import Media
 
@@ -9,8 +11,7 @@ directory: media
 
 def install(app):
     app.cliarguments.append(MediaCLI)
-    app.settings.merge('media: {}')
-    app.settings['media'].merge(DEFAULT_SETTINGS)
+    app.settings |= Meld(DEFAULT_SETTINGS, root='media')
     app.media = Media()
 
     @app.when
